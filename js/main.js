@@ -21,6 +21,10 @@ function removeNote(note){
 	$(note).remove();
 }
 
+function reverseFade(noteDir){
+	TweenLite.to(document.getElementById(noteDir), 0.1, {opacity: "0.7"});
+}
+
 function callCreateSong(notes, noteDelays){
 	angular.element(document.getElementById('wrapper')).scope().createSong(notes, noteDelays);
 }

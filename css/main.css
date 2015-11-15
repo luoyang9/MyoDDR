@@ -19,6 +19,18 @@ body {
 	color: #eee;
 }
 
+.instructions {
+	margin: 35px;
+	margin-right: 0px;
+	padding: 10px;
+	border: 1px solid #fff;
+  	border-radius: 3px;
+  	box-shadow: 0 1px 5px rgba(5, 5, 5, 0.50);
+  	background-color: rgba(143, 0, 179, 0.30);
+	color: #eee;
+	width:250px;
+}
+
 .start {
 	position:absolute;
 	top: 0;
@@ -91,6 +103,26 @@ body {
 	z-index: -2;
 }
 
+#note-path-left > div{
+	background-color: #18BA1B;
+}
+
+
+#note-path-right > div{
+	background-color: #B82E2E;
+}
+
+
+#note-path-up > div{
+	background-color: #3444BF;
+}
+
+
+#note-path-down > div{
+	background-color: #B3BA2F;
+}
+
+
 .note-bar {
 	display: inline-block;	
 	width: 100%;
@@ -98,6 +130,7 @@ body {
 }
 
 .note {
+	color: black;
 	height: 50px;
 	margin: 2px;
 	flex: 1;
