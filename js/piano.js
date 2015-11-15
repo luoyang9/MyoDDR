@@ -1,24 +1,41 @@
 function play(key){
 	switch(key){
-		case "A": document.getElementById("ASound").play(); 
+		case "A": document.getElementById("ASound").pause(); 
+		document.getElementById("ASound").currentTime = 0;
+		document.getElementById("ASound").play();
 		TweenLite.to(document.getElementById("A"), 0.2, {opacity: 1}).reverse(0); break;
 		case "B": document.getElementById("BSound").play(); 
+		document.getElementById("BSound").currentTime = 0;
+		document.getElementById("BSound").play();
 		TweenLite.to(document.getElementById("B"), 0.2, {opacity: 1}).reverse(0); break;
 		case "C": document.getElementById("CSound").play(); 
+		document.getElementById("CSound").currentTime = 0;
+		document.getElementById("CSound").play();
 		TweenLite.to(document.getElementById("C"), 0.2, {opacity: 1}).reverse(0); break;
 		case "D": document.getElementById("DSound").play(); 
+		document.getElementById("DSound").currentTime = 0;
+		document.getElementById("DSound").play();
 		TweenLite.to(document.getElementById("D"), 0.2, {opacity: 1}).reverse(0); break;
 		case "E": document.getElementById("ESound").play(); 
+		document.getElementById("ESound").currentTime = 0;
+		document.getElementById("ESound").play();
 		TweenLite.to(document.getElementById("E"), 0.2, {opacity: 1}).reverse(0); break;
 		case "F": document.getElementById("FSound").play();
+		document.getElementById("FSound").currentTime = 0;
+		document.getElementById("FSound").play();
 		TweenLite.to(document.getElementById("F"), 0.2, {opacity: 1}).reverse(0); break;
 		case "G": document.getElementById("GSound").play(); 
+		document.getElementById("GSound").currentTime = 0;
+		document.getElementById("GSound").play();
 		TweenLite.to(document.getElementById("G"), 0.2, {opacity: 1}).reverse(0); break;
 		case "HC": document.getElementById("HCSound").play(); 
+		document.getElementById("HCSound").currentTime = 0;
+		document.getElementById("HCSound").play();
 		TweenLite.to(document.getElementById("HC"), 0.2, {opacity: 1}).reverse(0); break;
 	}
 }
-
+var previousActionR;
+var previousActionL;
 
 Myo.connect('com.enghack.poseDetect');
 
@@ -39,33 +56,20 @@ var poseL = 'open', poseR = 'open';
 var pitch, yaw;
 
 function getDir(p, y){
-	if(-0.5 < p && p < 0.5){
-		if(y > 0.5){
+	if(-0.6 < p && p < 0.6){
+		if(y > 0.6){
 			return 'left';
-		}else if(y < -0.5){
+		}else if(y < -0.6){
 			return 'right';
 		}else{
 			return 'middle';
 		}
 	}else{
-		if(p > 0.5){
+		if(p > 0.6){
 			return 'up';
 		}else{
 			return 'down';
 		}
-	}
-}
-
-function getDir(p, y){
-	if(-0.5 < p && p < 0.5){
-		return 'middle';
-	}else{
-		if(p > 0.5){
-			return 'up';
-		}else{
-			return 'down';
-		}
-
 	}
 }
 
@@ -99,6 +103,7 @@ Myo.on('orientation', function(data){
 });
 
 setInterval(function(){
+	console.log(previousActionR);
 	if(previousActionR != directionR)
 	{
 	  previousActionR = directionR;

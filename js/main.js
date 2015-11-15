@@ -62,19 +62,6 @@ Myo.on('connected', function(){
 		}
 	}
 
-	function getDir(p, y){
-		if(-0.5 < p && p < 0.5){
-			return 'middle';
-		}else{
-			if(p > 0.5){
-				return 'up';
-			}else{
-				return 'down';
-			}
-
-		}
-	}
-
 	Myo.on('pose', function(pose){
 		if(pose == 'fist'){
 			if(this.name == 'Right Myo'){
