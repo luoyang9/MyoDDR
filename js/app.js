@@ -20,7 +20,7 @@ var count;
 			note.className = "activeNote";
 			note.setAttribute("note", noteID);
 
-			TweenLite.to(note, 2, {top:550, ease:Linear.easeNone, onComplete: removeNote, onCompleteParams: [note]});
+			TweenLite.to(note, 2, {top:575, ease:Linear.easeNone, onComplete: removeNote, onCompleteParams: [note]});
 			notepath.appendChild(note);
 		};
 
