@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
 	
 	<title>Myo DDR</title>
 
@@ -67,8 +67,8 @@
 				<div class="note" id="down" ng-click="noteBarClick(4)"></div>
 		</div>
 	</div>
-	<h1 style="position:absolute; top:0; left:0">SCORE : {{score}}</h1>
-	<div style="position:absolute; top:0;right:0;width: 300px; text-align:center; font-size: 30px; height: 100px;background-color:lightblue; display:inline-block" ng-click="loadSong()">START SONG</div>
+	<h1 class='score'>SCORE : {{score}}</h1>
+	<div class='start' ng-click="loadSong()">START SONG</div>
 	<audio style="display:hidden" id="currentSong">
   		<source src="music/roboto.mp3" type="audio/mpeg">
 	</audio>

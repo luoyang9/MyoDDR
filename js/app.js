@@ -84,8 +84,16 @@ var count;
 			{
 				if(activeNotes[i].getAttribute("note") == noteID && $scope.collision($(activeNotes[i]), $(noteBarBtn)))
 				{
+					var noteDir;
 					$scope.score += 1;
-					removeNote(activeNotes[i]);
+					switch(noteID){
+						case 1: noteDir = 'left'; break;
+						case 2: noteDir = 'right'; break;
+						case 3: noteDir = 'up'; break;
+						case 4: noteDir = 'down'; break;
+					}
+					TweenLite.to(document.getElementById(noteDir), 0.3, {opacity: "0.25"}).reverse(0);
+					TweenLite.to(activeNotes[i], 0.3, {opacity: "0", onComplete: removeNote, onCompleteParams: [activeNotes[i]]});
         			$scope.$apply();
 				}
 			}

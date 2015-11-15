@@ -47,8 +47,6 @@ Myo.on('connected', function(){
 		}
 	}
 
-	console.log(Myo);
-
 	Myo.on('pose', function(pose){
 		if(pose == 'fist'){
 			if(this.name == 'Right Myo'){
@@ -71,7 +69,7 @@ Myo.on('connected', function(){
 	Myo.on('orientation', function(data){
 		pitch = Math.asin(Math.max(-1.0, Math.min(1.0, 2.0 * (data.w * data.y - data.z * data.x))));
 	    yaw = Math.atan2(2.0 * (data.w * data.z + data.x * data.y), 1.0 - 2.0 * (data.y * data.y + data.z * data.z));
-	    if(this.name == 'EngHack Myo'){
+	    if(this.name == 'Right Myo'){
 	    	directionR = getDir(pitch, yaw);
 	    }else{
 	    	directionL = getDir(pitch, yaw);
@@ -79,7 +77,7 @@ Myo.on('connected', function(){
 	});
 
 	setInterval(function(){
-			console.log(directionR + " " + directionL);
+		console.log(directionR + " " + directionL);
 		if(previousActionR != directionR)
 		{
 		  previousActionR = directionR;
