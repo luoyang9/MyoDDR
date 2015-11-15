@@ -70,9 +70,10 @@
 	</div>
 
 	<h1 class='score' style="position:absolute; top:0; left:0">Score : {{score}}</h1>
-	<div style="position:absolute; top:200px; left:0" onClick="yawSync()">SYNC MYO FIRST</div>
-	<div style="position:absolute; top:0;right:0;width: 300px; text-align:center; font-size: 25px; height: 100px;background-color:lightblue; display:inline-block" ng-click="loadSong('fire')">START THROUGH THE FIRE AND FLAMES</div>
-	<div style="position:absolute; top:100px;right:0;width: 300px; text-align:center; font-size: 25px; height: 100px;background-color:lightblue; display:inline-block" ng-click="loadSong('roboto')">START MR ROBOTO</div>
+	<div class='start'>
+		<div class='start-btn' ng-click="loadSong('fire')">START THROUGH THE FIRE AND FLAMES</div>
+		<div class='start-btn' ng-click="loadSong('roboto')">START MR ROBOTO</div>
+	</div>
 
 	<audio style="display:hidden" id="currentSong">
   		<source src="music/roboto.mp3" type="audio/mpeg">
