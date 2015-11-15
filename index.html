@@ -52,13 +52,14 @@
 	<link href="css/main.css" rel="stylesheet">					
 </head>
 <body>
+
 <div id="wrapper" ng-controller="GameController as game">
 	<div class="note-container">
 		<div class="note-path" id="note-path">
-			<div id ="note-path-left"></div>
-			<div id="note-path-right"></div>
-			<div id="note-path-up"></div>
-			<div id="note-path-down"></div>
+			<div class='path' id ="note-path-left"></div>
+			<div class='path' id="note-path-right"></div>
+			<div class='path' id="note-path-up"></div>
+			<div class='path' id="note-path-down"></div>
 		</div>
 		<div class="note-bar">
 				<div class="note" id="left" ng-click="noteBarClick(1)"></div>
@@ -67,7 +68,7 @@
 				<div class="note" id="down" ng-click="noteBarClick(4)"></div>
 		</div>
 	</div>
-	<h1 class='score'>SCORE : {{score}}</h1>
+	<h1 class='score'>Score : {{score}}</h1>
 	<div class='start' ng-click="loadSong()">START SONG</div>
 	<audio style="display:hidden" id="currentSong">
   		<source src="music/roboto.mp3" type="audio/mpeg">
