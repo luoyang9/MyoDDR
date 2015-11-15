@@ -11,17 +11,22 @@ body {
 }
 
 .piano-container {
+	position: relative;
+	top: 50px;
 	margin: 0 auto;
 	width: 100%;
-	max-width: 600px;
+	max-width: 700px;
     box-shadow: 0 0px 5px rgba(5, 5, 5, 0.50);
     display: flex;
+    z-index: 0;
 }
 
 .pkey {
 	flex: 1;
-	height: 200px;	
+	height: 300px;
 	background-color:white;
+	border: 1px solid #000;
+	border-right: 0px;
 	opacity: 0.8;
 	text-align: center;
 	position: relative;
@@ -31,4 +36,40 @@ body {
 	position: absolute;
 	bottom: 0;
 	left: 50%;
+}
+
+.blackkeys {
+	position: relative;
+	top: 50px;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 700px;
+    display: flex;
+    z-index: 2;
+}
+
+.bkey1{
+	flex: 1;
+	height: 200px;
+	max-width: 50px;
+	margin-left: 35px;
+	background-color: black;
+	border: 1px solid #000;
+	text-align: center;
+	position: relative;
+	bottom: 300px;
+	left: 30px;
+}
+
+.bkey2{
+	flex: 1;
+	height: 200px;
+	max-width: 50px;
+	margin-left: 38px;
+	background-color: black;
+	border: 1px solid #000;
+	text-align: center;
+	position: relative;
+	bottom: 300px;
+	left: 120px;
 }
