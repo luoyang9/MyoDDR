@@ -1,0 +1,34 @@
+body {
+	width: 100%;
+	height: 100vh;
+	background-image: url('../bg.jpg');
+	border: 2px solid #777;
+}
+
+#wrapper{
+	width: 100%;
+	height: 100%;
+}
+
+.piano-container {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 600px;
+    box-shadow: 0 0px 5px rgba(5, 5, 5, 0.50);
+    display: flex;
+}
+
+.pkey {
+	flex: 1;
+	height: 200px;	
+	background-color:white;
+	opacity: 0.8;
+	text-align: center;
+	position: relative;
+}
+
+.pkey p {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+}
