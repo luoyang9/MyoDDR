@@ -98,7 +98,7 @@ var count;
 						case 4: noteDir = 'down'; break;
 					}
 					TweenLite.to(document.getElementById(noteDir), 0.3, {opacity: "0.25"}).reverse(0);
-					TweenLite.to(activeNotes[i], 0.3, {opacity: "0", onComplete: removeNote, onCompleteParams: [activeNotes[i]]});
+					removeNote(activeNotes[i]);
         			$scope.$apply();
 				}
 			}
