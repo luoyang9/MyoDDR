@@ -1,3 +1,27 @@
+
+$(document).ready(function(){
+	window.onkeydown = function (e) {
+	    var code = e.keyCode ? e.keyCode : e.which;
+	    if (code === 65) {  
+	    	play("C");
+	    } else if (code === 83) { 
+	    	play("D");
+	    } else if (code === 68){
+	    	play("E");
+	    } else if (code === 70){
+	    	play("F");
+	    }else if (code === 74){
+	    	play("G");
+	    }else if (code === 75){
+	    	play("A");
+	    }else if (code === 76){
+	    	play("B");
+	    }else if (code === 186){
+	    	play("HC");
+	    }
+	};
+});
+
 function play(key){
 	switch(key){
 		case "A": document.getElementById("ASound").pause(); 

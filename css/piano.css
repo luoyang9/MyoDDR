@@ -90,3 +90,20 @@ body {
   	background-color: rgba(0, 0, 0, 0.30);
 	color: #eee;
 }
+
+.instructions {
+	position:absolute;
+	font-size: 30px;
+	bottom: 1vh;
+	left: 4vw;
+	margin: 35px;
+	margin-right: 0px;
+	padding: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
+	border: 1px solid #fff;
+  	border-radius: 3px;
+  	box-shadow: 0 1px 5px rgba(5, 5, 5, 0.50);
+  	background-color: rgba(0, 0, 0, 0.30);
+	color: #eee;
+}
